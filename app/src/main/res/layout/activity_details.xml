@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:expandedTitleMarginStart="30dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+
+            <ImageView
+                android:id="@+id/detailsIV"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:src="@drawable/swift"
+                android:fitsSystemWindows="true"
+                android:layout_gravity="center"
+                app:layout_collapseMode="parallax"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/scrim"/>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/anim_toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            
+            <TextView
+                android:id="@+id/detailsExplain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="İçli Köfte Aslen Levant mutfağına ait olan bu yemeğe kibbe ve bazı yörelerde dolgulu köfte de deniliyor. İçli köfte, iki türlü hazırlanır. Bunlardan birincisi haşlama usulüdür. Bayram, söz, nişan, kına gecesi gibi özel günler ile misafir ağırlamada mutlaka sofradaki yerini alır."
+                android:gravity="center"
+                android:textSize="25sp"
+                android:layout_marginTop="30dp"
+                />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
